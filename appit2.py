@@ -252,7 +252,7 @@ def create_app_ui():
 '''#f3042e''' 
 
     
-    
+#to show the loading image when updating is in process  
 @app.callback(Output("loading-output-2", "children"), [Input("graph-obj1", "figure")])
 def input_triggers_spinner(value):
 
@@ -262,9 +262,9 @@ def input_triggers_spinner(value):
 def input_triggers_spinner1(value):
 
     return value
-#to filter the graph in india chart tool     
+     
 
-
+#to filter the graph in world chart tool
 @app.callback(
     dash.dependencies.Output('areagraph','figure'),
     [ 
@@ -272,7 +272,7 @@ def input_triggers_spinner1(value):
     dash.dependencies.Input('search','value'),
     dash.dependencies.Input('year-sld2', 'value'),])
 
-     
+#For world chart tool    
 def update_app_ui3(chart_dp_value, search, year_selector):
     
             
